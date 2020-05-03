@@ -69,7 +69,7 @@ class App extends React.Component {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
-        const data = JSON.parse(xhr.responseText)
+        const data = JSON.parse(xhr.responseText);
         const result = this.callCalculatePi();
         this.setState({ pi: result, prime_numbers: data });
       }
